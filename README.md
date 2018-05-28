@@ -15,4 +15,4 @@
 * `pip3 install cfscrape`
 
 ### Parsing :
-<p>Python 3's Inbuilt `html.parser` Is Used. You May Compare Others Here, [**BeautifulSoup - Different Parsers**](https://www.crummy.com/software/BeautifulSoup/bs4/doc/#installing-a-parser)</p>
+Python 3's Inbuilt `html.parser` Is Used. You May Compare Others Here, [**BeautifulSoup - Different Parsers**](https://www.crummy.com/software/BeautifulSoup/bs4/doc/#installing-a-parser)
