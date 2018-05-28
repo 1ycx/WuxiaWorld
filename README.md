@@ -9,9 +9,10 @@
 
 ## Documentation :
 <p>For Beginners, After Setting Up A Working Python 3 Environment, You Need To Install Some Packages. To Install, Run These Commands In Your CMD/Terminal :</p>
-```
-pip3 install bs4
-pip3 install ebooklib
-pip3 install cfscrape
-```
-Python 3's Inbuilt `html.parser` Is Used. You May Compare Others Here - [**BeautifulSoup - Different Parsers**](https://www.crummy.com/software/BeautifulSoup/bs4/doc/#installing-a-parser)
+
+* `pip3 install bs4`
+* `pip3 install ebooklib`
+* `pip3 install cfscrape`
+
+### Parsing :
+<p>Python 3's Inbuilt `html.parser` Is Used. You May Compare Others Here, [**BeautifulSoup - Different Parsers**](https://www.crummy.com/software/BeautifulSoup/bs4/doc/#installing-a-parser)</p>
