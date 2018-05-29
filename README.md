@@ -13,6 +13,7 @@
 * `pip3 install bs4`
 * `pip3 install ebooklib`
 * `pip3 install cfscrape`
+* `pip3 install html5lib`
 
 ### Parsing :
-Python 3's Inbuilt `html.parser` Is Used. You May Compare Others Here, [**BeautifulSoup - Different Parsers**](https://www.crummy.com/software/BeautifulSoup/bs4/doc/#installing-a-parser)
+`html5lib` Is Used. You May Compare Others Here, [**BeautifulSoup - Different Parsers**](https://www.crummy.com/software/BeautifulSoup/bs4/doc/#installing-a-parser)
