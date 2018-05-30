@@ -3,14 +3,15 @@
 <h4>Python Script To Copy WW Chapters Into EPUB File. I'll Try To Add Any Necessary Updates.</h4>
 
 
-<h4> Author :  <a href="https://forum.wuxiaworld.com/profile/Aundinn">Aundinn</a> </h4>
+<h4> Initial Author :  <a href="https://forum.wuxiaworld.com/profile/Aundinn">Aundinn</a> </h4>
 
 <br/>
-
 
 ## Tasks(Goals) :
 - [ ] To Integrate ML 
 - [ ] Make The Code Get List Of Chapters And Use Links From The List Rather Than Progress Sequentially.
+
+<br/>
 
 ## Documentation :
 1. For Beginners, After Setting Up A Working Python 3 Environment, You Need To Install Some Packages. To Install, Run These Commands In Your CMD/Terminal :
