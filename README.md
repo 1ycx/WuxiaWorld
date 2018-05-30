@@ -8,12 +8,25 @@
 <br/>
 
 ## Documentation :
-<p>For Beginners, After Setting Up A Working Python 3 Environment, You Need To Install Some Packages. To Install, Run These Commands In Your CMD/Terminal :</p>
+1. For Beginners, After Setting Up A Working Python 3 Environment, You Need To Install Some Packages. To Install, Run These Commands In Your CMD/Terminal :
 
-* `pip3 install bs4`
-* `pip3 install ebooklib`
-* `pip3 install cfscrape`
-* `pip3 install html5lib`
+  `pip3 install bs4`
+  
+  `pip3 install ebooklib`
+  
+  `pip3 install cfscrape`
+  
+  `pip3 install html5lib`
+  
+
+2. Download The Python Script And Unzip It.
+
+3. Open The Script With A Text Editor And Read The Details Inside.
+
+4. To Run, Open Terminal/CMD, Navigate To The Unzip Location And Type :
+  `python3 Code.py`
+
+
 
 ### Parsing :
 `html5lib` Is Used. You May Compare Others Here, [**BeautifulSoup - Different Parsers**](https://www.crummy.com/software/BeautifulSoup/bs4/doc/#installing-a-parser)
