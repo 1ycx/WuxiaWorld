@@ -9,15 +9,10 @@
 
 ## Documentation :
 1. For Beginners, After Setting Up A Working Python 3 Environment, You Need To Install Some Packages. To Install, Run These Commands In Your CMD/Terminal :
-
-  `pip3 install bs4`
-  
-  `pip3 install ebooklib`
-  
-  `pip3 install cfscrape`
-  
-  `pip3 install html5lib`
-  
+   * `pip3 install bs4`
+   * `pip3 install ebooklib`
+   * `pip3 install cfscrape`
+   * `pip3 install html5lib` 
 
 2. Download The Python Script And Unzip It.
 
