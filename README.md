@@ -7,6 +7,11 @@
 
 <br/>
 
+
+## Tasks(Goals) :
+- [ ] To Integrate ML 
+- [ ] Make The Code Get List Of Chapters And Use Links From The List Rather Than Progress Sequentially.
+
 ## Documentation :
 1. For Beginners, After Setting Up A Working Python 3 Environment, You Need To Install Some Packages. To Install, Run These Commands In Your CMD/Terminal :
    * `pip3 install bs4`
@@ -23,11 +28,6 @@
 4. To Run, Open Terminal/CMD, Navigate To The Unzip Location And Type :
   `python3 Code.py`
 
-
-## Tasks(Goals) :
-- [ ] To Integrate ML 
-- [ ] Make The Code Get List Of Chapters And Use Links From The List Rather Than Progress Sequentially.
-
 ### Working :
 * Set The Title Of EPUB.
 * Check The Total Number Of Chapters Of A Novel And Set The Value Inside `start` and `end` Variables.
@@ -41,5 +41,5 @@
   * Example : AWE Chapters 472,473,474 Have Different URLs Which Aren't Sequential Like The Rest From 1-630.
 
 ### Parsing :
-`html5lib` Is Used. You May Compare Others Here, [**BeautifulSoup - Different Parsers**](https://www.crummy.com/software/BeautifulSoup/bs4/doc/#installing-a-parser)
+`html5lib` Is Used Because It Generates Valid HTML. You May Compare Others Here, [**BeautifulSoup - Different Parsers**](https://www.crummy.com/software/BeautifulSoup/bs4/doc/#installing-a-parser)
 
