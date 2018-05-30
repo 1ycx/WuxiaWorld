@@ -23,13 +23,18 @@
 4. To Run, Open Terminal/CMD, Navigate To The Unzip Location And Type :
   `python3 Code.py`
 
+
+## Tasks(Goals) :
+- [ ] To Integrate ML 
+- [ ] Make The Code Get List Of Chapters And Use Links From The List Rather Than Progress Sequentially.
+
 ### Working :
 * Set The Title Of EPUB.
-* You Then Check The Total Number Of Chapters Of A Novel And Set The Value Inside `start` and `end` Variables.
-* Then Get The URL For First Chapter Without The Chapter Number.
+* Check The Total Number Of Chapters Of A Novel And Set The Value Inside `start` and `end` Variables.
+* Get The URL For First Chapter Without The Chapter Number.
   * Example, AWE Chapter One : "https://www.wuxiaworld.com/novel/a-will-eternal/awe-chapter-1"
   * Now, Remove The 1 At The End Such That It Is, "https://www.wuxiaworld.com/novel/a-will-eternal/awe-chapter-"
-* Lastly, Set This URL Inside `urlPrefix` Variable And Run The Code.
+* Set This URL Inside `urlPrefix` Variable And Run The Code.
 
 ### Problems :
 1. If Some Chapter Does Not Have A Sequential Number, Then It Won't Be Added. You'll Get To Know Which, Inside The Terminal.
@@ -38,6 +43,3 @@
 ### Parsing :
 `html5lib` Is Used. You May Compare Others Here, [**BeautifulSoup - Different Parsers**](https://www.crummy.com/software/BeautifulSoup/bs4/doc/#installing-a-parser)
 
-## Tasks :
-- [ ] To Integrate ML 
-- [ ] Make The Code Get List Of Chapters And Use Links From The List Rather Than Progress Sequentially.
