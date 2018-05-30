@@ -26,8 +26,10 @@
 
 4. In Case The Script Was Not Updated According To The Changes In Website, You Might Refer The [**BeautifulSoup Docs**](https://www.crummy.com/software/BeautifulSoup/bs4/doc/) To Make Changes Accordingly.
 
-4. To Run, Open Terminal/CMD, Navigate To The Unzip Location And Type :
+4. To Run, Open CMD/Terminal, Navigate To The Unzip Location And Type :
   `python3 Code.py`
+
+5. EPUB File Will Be Saved At The Location Of Script.
 
 ### Working :
 * Set The Title Of EPUB.
@@ -39,8 +41,8 @@
 
 ### Problems :
 1. If Some Chapter Does Not Have A Sequential Number, Then It Won't Be Added. You'll Get To Know Which, Inside The Terminal.
-  * Example : AWE Chapters 472,473,474 Have Different URLs Which Aren't Sequential Like The Rest From 1-630.
+   * Example : AWE Chapters 472,473,474 Have Different URLs Which Aren't Sequential Like The Rest From 1-630.
 
 ### Parsing :
-`html5lib` Is Used Because It Generates Valid HTML. You May Compare Others Here, [**BeautifulSoup - Different Parsers**](https://www.crummy.com/software/BeautifulSoup/bs4/doc/#installing-a-parser)
+`html5lib` Is Used Because Although Being Slow, It Generates Valid HTML. You May Compare Others Here, [**BeautifulSoup - Different Parsers**](https://www.crummy.com/software/BeautifulSoup/bs4/doc/#installing-a-parser)
 
