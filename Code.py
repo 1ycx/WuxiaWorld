@@ -1,10 +1,6 @@
 #!/usr/bin/python
 # coding: latin-1
 
-#####################
-# Rename This File With A .py Extension.
-#####################
-
 import os
 import cfscrape
 import re
