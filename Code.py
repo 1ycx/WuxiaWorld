@@ -13,12 +13,12 @@ book = epub.EpubBook()
 #####################
 # CONFIGURATIONS
 #####################
-title = 'AWE_t1' # The title you want to give to the book
-beginning = 0 # First chapter
-end = 3 # Last chapter
+title = 'Perfect_World' # The title you want to give to the book
+beginning = 1 # First chapter
+end = 585 # Last chapter
 
 # Enter Address Of Novel Without Chapter Number
-urlPrefix = "https://www.wuxiaworld.com/novel/a-will-eternal/awe-chapter-"
+urlPrefix = "https://www.wuxiaworld.com/novel/perfect-world/pw-chapter-"
 
 #####################
 tableOfContents = ()
@@ -36,7 +36,7 @@ for i in range(beginning, end+1):
 
 
      # Modifies the HTML received
-     soup = BeautifulSoup(strpage, 'html5lib')    
+     soup = BeautifulSoup(strpage, "html5lib")    
      #chapterTitle = "Chapter : " + str(i)
      chapterTitle = soup.select('h4')[1].get_text()
      div = soup.select_one('div[class="fr-view"]')
@@ -106,7 +106,7 @@ saveLocation = pathToLocation + title + '.epub'
 
 # Saves Your EPUB File
 epub.write_epub(saveLocation, book, {})
-s
+
 # Location File Got Saved
 if pathToLocation == '':
  print("Saved at " + str(os.getcwd()) + ' as "' + title + '.epub"')
