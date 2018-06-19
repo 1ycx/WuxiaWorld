@@ -7,10 +7,14 @@
 
 <br/>
 
-## Tasks(Goals) :
-- [ ] To Integrate ML 
-- [ ] Make The Code Get List Of Chapters And Use Links From The List Rather Than Progress Sequentially.
+## Task(s) :
+- [ ] Make The Code Get List Of Chapters And Use Links From The List Rather Than Progress Sequentially Because Of The Arising Problem.
 
+
+## Problems :
+1. If Some Chapter Does Not Have A Sequential Number, Then It Won't Be Added. You'll Get To Know Which, Inside The Terminal.
+   * Example : AWE Chapters 472,473,474 Have Different URLs Which Aren't Sequential Like The Rest From 1-630.
+   
 <br/>
 
 ## Documentation :
@@ -39,9 +43,6 @@
   * Now, Remove The 1 At The End Such That It Is, "https://www.wuxiaworld.com/novel/a-will-eternal/awe-chapter-"
 * Set This URL Inside `urlPrefix` Variable And Run The Code.
 
-### Problems :
-1. If Some Chapter Does Not Have A Sequential Number, Then It Won't Be Added. You'll Get To Know Which, Inside The Terminal.
-   * Example : AWE Chapters 472,473,474 Have Different URLs Which Aren't Sequential Like The Rest From 1-630.
 
 ### Parsing :
 `html5lib` Is Used Because Although Being Tiny Winy Bit Slow, It Generates Valid HTML. You May Compare Others Here, [**BeautifulSoup - Different Parsers**](https://www.crummy.com/software/BeautifulSoup/bs4/doc/#installing-a-parser)
