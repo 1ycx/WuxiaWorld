@@ -11,7 +11,7 @@
 - [ ] Make The Code Get List Of Chapters And Use Links From The List Rather Than Progress Sequentially Because Of The Arising Problem.
 
 
-## Problems :
+## Problem(s) :
 1. If Some Chapter Does Not Have A Sequential Number, Then It Won't Be Added. You'll Get To Know Which, Inside The Terminal.
    * Example : AWE Chapters 472,473,474 Have Different URLs Which Aren't Sequential Like The Rest From 1-630.
    
