@@ -8,7 +8,7 @@
 <br/>
 
 ## Task(s) :
-- [ ] Make The Code Get List Of Chapters And Use Links From The List Rather Than Progress Sequentially Because Of The Arising Problem.
+- [ ] Make The Code Get List Of Chapters And Use Links From The List Rather Than Progress Sequentially Because Of The Arising Problem ( Update Coming Soon )
 
 
 ## Problem(s) :
