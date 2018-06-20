@@ -9,12 +9,11 @@
 <br/>
 
 ## Task(s) :
-- [x] Make The Code Get List Of Chapters And Use Links From The List Rather Than Progress Sequentially Because Of The Arising Problem <s>( Update Coming Soon )</s>
+- [x] Make The Code Get List Of Chapters And Use Links From The List Rather Than Progress Sequentially Because Of The Arising Problem
 
 
 ## Problem(s) :
-<s>1. If Some Chapter Does Not Have A Sequential Number, Then It Won't Be Added. You'll Get To Know Which, Inside The Terminal.</s>
-   <s>* Example : AWE Chapters 472,473,474 Have Different URLs Which Aren't Sequential Like The Rest From 1-630.</s>
+
 ### None Yet
    
 <br/>
@@ -40,6 +39,7 @@
 ### Working :
 * Set Novel Link in `novelURL`
 * If Specific Chapters Are To Be Downloaded Then, Select 2 And Enter The `start` And `end` Chapters.
+* All Chapters Of Corresponding Novel Will Be Downloaded And Saved As `novel-name_start-chapter_end-chapter.epub'
 
 ### Parsing :
 `html5lib` Is Used Because Although Being Tiny Winy Bit Slow, It Generates Valid HTML. You May Compare Others Here, [**BeautifulSoup - Different Parsers**](https://www.crummy.com/software/BeautifulSoup/bs4/doc/#installing-a-parser)
