@@ -49,3 +49,7 @@ Just Enter The Novel URL And You're Good To Go!
 ### Parsing :
 `html5lib` Is Used Because Although Being Tiny Winy Bit Slow, It Generates Valid HTML. You May Compare Others Here, [**BeautifulSoup - Different Parsers**](https://www.crummy.com/software/BeautifulSoup/bs4/doc/#installing-a-parser)
 
+
+## License
+
+Copyright &copy; 2018 [Kogam22](https://github.com/Kogam22). Released under the terms of the [MIT license](LICENSE.md).
