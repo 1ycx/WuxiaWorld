@@ -38,8 +38,8 @@
 
 ### Working :
 * Set Novel Link in `novelURL`
-* If Specific Chapters Are To Be Downloaded Then, Select 2 And Enter The `start` And `end` Chapters.
-* All Chapters Of Corresponding Novel Will Be Downloaded And Saved As `novel-name_start-chapter_end-chapter.epub'
+* If Specific Chapters Are To Be Downloaded Then, Enter 2 And Provide The `start` And `end` Chapters.
+* All Chapters Of Corresponding Novel Will Be Downloaded And Saved At `novel-name_start-chapter_end-chapter.epub'
 
 ### Parsing :
 `html5lib` Is Used Because Although Being Tiny Winy Bit Slow, It Generates Valid HTML. You May Compare Others Here, [**BeautifulSoup - Different Parsers**](https://www.crummy.com/software/BeautifulSoup/bs4/doc/#installing-a-parser)
