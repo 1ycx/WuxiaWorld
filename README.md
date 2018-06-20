@@ -4,10 +4,9 @@
 
 Copies The Novel Chapters Along With Novel Details And Sometimes 'Not' The Cover Image (IDK Why ? Maybe Because Of BeautifulSoup4 Internal Problem).
 
-Just Enter The Novel URL And You're Good To Go!
+Just Enter The Novel URL And You're Done!
 
 <h4>I'll Try To Add Any Necessary Updates.</h4>
-
 
 <h4> Initial Author :  <a href="https://forum.wuxiaworld.com/profile/Aundinn">Aundinn</a> </h4>
 
