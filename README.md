@@ -1,4 +1,4 @@
-<img src="https://img.shields.io/badge/Version-2.1.1-brightgreen.svg" ></img>
+<img src="https://img.shields.io/badge/Version-3.0-brightgreen.svg" ></img>
 # About: 
 <h4>Python Script To Copy WW Chapters Into EPUB File. I'll Try To Add Any Necessary Updates.</h4>
 
@@ -8,12 +8,13 @@
 <br/>
 
 ## Task(s) :
-- [ ] Make The Code Get List Of Chapters And Use Links From The List Rather Than Progress Sequentially Because Of The Arising Problem ( Update Coming Soon )
+- [x] Make The Code Get List Of Chapters And Use Links From The List Rather Than Progress Sequentially Because Of The Arising Problem <s>( Update Coming Soon )</s>
 
 
 ## Problem(s) :
-1. If Some Chapter Does Not Have A Sequential Number, Then It Won't Be Added. You'll Get To Know Which, Inside The Terminal.
-   * Example : AWE Chapters 472,473,474 Have Different URLs Which Aren't Sequential Like The Rest From 1-630.
+<s>1. If Some Chapter Does Not Have A Sequential Number, Then It Won't Be Added. You'll Get To Know Which, Inside The Terminal.</s>
+   <s>* Example : AWE Chapters 472,473,474 Have Different URLs Which Aren't Sequential Like The Rest From 1-630.</s>
+### None Yet
    
 <br/>
 
@@ -31,18 +32,13 @@
 4. In Case The Script Was Not Updated According To The Changes In Website, You Might Refer The [**BeautifulSoup Docs**](https://www.crummy.com/software/BeautifulSoup/bs4/doc/) To Make Changes Accordingly.
 
 4. To Run, Open CMD/Terminal, Navigate To The Unzip Location And Type :
-  `python3 Code.py`
+  `python3 code.py`
 
 5. EPUB File Will Be Saved At The Location Of Script.
 
 ### Working :
-* Set The Title Of EPUB.
-* Check The Total Number Of Chapters Of A Novel And Set The Value Inside `start` and `end` Variables.
-* Get The URL For First Chapter Without The Chapter Number.
-  * Example, AWE Chapter One : "https://www.wuxiaworld.com/novel/a-will-eternal/awe-chapter-1"
-  * Now, Remove The 1 At The End Such That It Is, "https://www.wuxiaworld.com/novel/a-will-eternal/awe-chapter-"
-* Set This URL Inside `urlPrefix` Variable And Run The Code.
-
+* Set Novel Link in `novelURL`
+* If Specific Chapters Are To Be Downloaded Then, Select 2 And Enter The `start` And `end` Chapters.
 
 ### Parsing :
 `html5lib` Is Used Because Although Being Tiny Winy Bit Slow, It Generates Valid HTML. You May Compare Others Here, [**BeautifulSoup - Different Parsers**](https://www.crummy.com/software/BeautifulSoup/bs4/doc/#installing-a-parser)
