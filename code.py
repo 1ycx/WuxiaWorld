@@ -15,7 +15,7 @@ book.set_language('en')
 ww = 'https://www.wuxiaworld.com'
 
 # Enter The Novel URL Here
-novelURL =  'https://www.wuxiaworld.com/novel/rmji'
+novelURL =  ''
 while novelURL == '':
     print("Novel URL Not Provided Inside The Script.")
     novelURL = str(input("Please Enter Novel URL : "))
