@@ -1,6 +1,7 @@
 <img src="https://img.shields.io/badge/Version-3.0-brightgreen.svg" ></img>
 # About: 
-<h4>Python Script To Copy WW Chapters Into EPUB File. I'll Try To Add Any Necessary Updates.</h4>
+<h4>Python Script To Copy WW Chapters Into EPUB File. Copies The Novel Chapters Along With Novel Details And Sometimes 'Not' Cover Image (I Think Because Of BeautifulSoup4 Internal Problem).</h4> 
+<h4>I'll Try To Add Any Necessary Updates.</h4>
 
 
 <h4> Initial Author :  <a href="https://forum.wuxiaworld.com/profile/Aundinn">Aundinn</a> </h4>
