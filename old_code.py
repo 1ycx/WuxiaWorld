@@ -46,7 +46,7 @@ for i in range(beginning, end+1):
 
      # Creates a chapter
      c1 = epub.EpubHtml(title=chapterTitle, file_name='chap_'+str(i)+'.xhtml', lang='hr')
-     c1.content = div.encode('ascii')
+     c1.content = div.encode('utf-8')
      book.add_item(c1)
 
 
