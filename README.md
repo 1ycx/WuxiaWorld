@@ -38,7 +38,7 @@
 
 ### Working :
 * Set Novel Link in `novelURL`
-* If Specific Chapters Are To Be Downloaded Then, Enter 2 And Provide The `start` And `end` Chapters.
+* If Specific No. Of Chapters Are To Be Downloaded, Then Enter 2 And Provide The `start` And `end` Chapters.
 * All Chapters Of Corresponding Novel Will Be Downloaded And Saved At `novel-name_start-chapter_end-chapter.epub'
 
 ### Parsing :
