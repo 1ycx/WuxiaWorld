@@ -17,10 +17,9 @@ Just Enter The Novel URL And You're Done!
 
 
 ## Problem(s) :
-
-### None Yet
+### None Yet.
    
-<br/>
+
 
 ## Documentation :
 1. For Beginners, After Setting Up A Working Python 3 Environment, You Need To Install Some Packages. To Install, Run These Commands In Your CMD/Terminal :
@@ -48,6 +47,7 @@ Just Enter The Novel URL And You're Done!
 ### Parsing :
 `html5lib` Is Used Because Although Being Tiny Winy Bit Slow, It Generates Valid HTML. You May Compare Others Here, [**BeautifulSoup - Different Parsers**](https://www.crummy.com/software/BeautifulSoup/bs4/doc/#installing-a-parser)
 
+<br/>
 
 ## License
 
