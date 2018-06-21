@@ -2,7 +2,7 @@
 # About: 
 <h4>Python Script To Copy WW Chapters Into EPUB File.</h4>
 
-Copies The Novel Chapters Along With Novel Details And Sometimes 'Not' The Cover Image (IDK Why ? Maybe Because Of BeautifulSoup4 Internal Problem).
+Copies The Novel Chapters Along With Novel Details And Sometimes(Once Every 6-10 Times Code Is Run) 'Not' The Cover Image (IDK Why ? Maybe Because Of BeautifulSoup4 Internal Problem).
 
 Just Enter The Novel URL And You're Done!
 
