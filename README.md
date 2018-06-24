@@ -1,4 +1,5 @@
-<img src="https://img.shields.io/badge/Version-3.0-brightgreen.svg" ></img>
+<img src="https://img.shields.io/badge/Version-3.0-brightgreen.svg" >
+
 # About: 
 <h4>Python Script To Copy WW Chapters Into EPUB File.</h4>
 
@@ -46,7 +47,75 @@ Just Enter The Novel URL And You're Done!
 * All Chapters Of Corresponding Novel Will Be Downloaded And Saved As `novel-name_start-chapter_end-chapter.epub`
 
 ### Parsing :
-`html5lib` Is Used Because Although Being Tiny Winy Bit Slow, It Generates Valid HTML. You May Compare Others Here, [**BeautifulSoup - Different Parsers**](https://www.crummy.com/software/BeautifulSoup/bs4/doc/#installing-a-parser)
+`html5lib` Is Used Because Although Being Tiny Winy Bit Slow, It Generates Valid HTML. You May Compare Others Here, [**Differences Between Parsers**](https://www.crummy.com/software/BeautifulSoup/bs4/doc/#differences-between-parsers).
+I've Copied The Table From BS4 Website Below To Give A Faint Overview.
+
+<table border="1" class="docutils">
+<colgroup><col width="18%"><col width="35%"><col width="26%"><col width="21%"></colgroup>
+<tbody valign="top">
+   <tr class="row-odd"><td><b>Parser</b></td>
+      <td><b>Typical usage</b></td>
+      <td><b>Advantages</b></td>
+      <td><b>Disadvantages</b></td>
+   </tr>
+   <tr class="row-even"><td><b>Python’s html.parser</b></td>
+      <td><code class="docutils literal"><span class="pre">BeautifulSoup(markup,</span> <span class="pre">"html.parser")</span></code></td>
+      <td><ul class="first last simple">
+            <li>Batteries included</li>
+            <li>Decent speed</li>
+            <li>Lenient (as of Python 2.7.3 and 3.2.)</li>
+         </ul>
+      </td>
+      <td><ul class="first last simple">
+            <li>Not very lenient (before Python 2.7.3 or 3.2.2)</li>
+         </ul>
+      </td>
+   </tr>
+   <tr class="row-odd"><td><b>lxml’s HTML parser</b></td>
+      <td><code class="docutils literal"><span class="pre">BeautifulSoup(markup,</span> <span class="pre">"lxml")</span></code></td>
+      <td><ul class="first last simple">
+            <li>Very fast</li>
+            <li>Lenient</li>
+          </ul>
+      </td>
+      <td><ul class="first last simple">
+            <li>External C dependency</li>
+          </ul>
+      </td>
+   </tr>
+   <tr class="row-even"><td><b>lxml’s XML parser</b></td>
+      <td><code class="docutils literal"><span class="pre">BeautifulSoup(markup,</span> <span class="pre">"lxml-xml")</span></code>
+   <code class="docutils literal"><span class="pre">BeautifulSoup(markup,</span> <span class="pre">"xml")</span></code></td>
+      <td><ul class="first last simple">
+            <li>Very fast</li>
+            <li>The only currently supported XML parser</li>
+          </ul>
+      </td>
+      <td><ul class="first last simple">
+            <li>External C dependency</li>
+          </ul>
+      </td>
+   </tr>
+   <tr class="row-odd"><td><b>html5lib</b></td>
+      <td><code class="docutils literal"><span class="pre">BeautifulSoup(markup,</span> <span class="pre">"html5lib")</span></code></td>
+      <td><ul class="first last simple">
+            <li>Extremely lenient</li>
+            <li>Parses pages the same way a web browser does</li>
+            <li>Creates valid HTML5</li>
+          </ul>
+      </td>
+      <td><ul class="first last simple">
+            <li>Very slow</li>
+            <li>External Python dependency</li>
+          </ul>
+      </td>
+   </tr>
+</tbody>
+</table>
+
+#### If Any Problem Occurs With `html5lib` :
+* In Case You Update It Accidentally, You Can Reinstall The Specific Version By Checking The Details For Beginners.
+* Another Choice, Change `html5lib` To `lxml` - **If Installed**, Otherwise To Python's Inbuilt `html.parser` .
 
 <br/>
 
