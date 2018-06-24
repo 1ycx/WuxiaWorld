@@ -15,7 +15,7 @@ book.set_language('en')
 ww = 'https://www.wuxiaworld.com'
 
 # Enter The Novel URL Here
-novelURL =  ''
+novelURL =  'https://www.wuxiaworld.com/novel/ancient-strengthening-technique/'
 while novelURL == '':
     print("Novel URL Not Provided Inside The Script.")
     novelURL = str(input("Please Enter Novel URL : "))
@@ -96,10 +96,13 @@ else:
         img.decompose()
     spine_loc = 2
 
-def html_gen(elem,val):
+def html_gen(elem, val, tag, insert_loc=None):
     element = soup.new_tag(elem)
     element.string = val
-    about.append(element)
+    if insert_loc == None:
+        tag.append(element)
+    else:
+        tag.insert(insert_loc, element)
 
 counter = 0
 err = []
@@ -124,9 +127,7 @@ for i in range(start, end+1):
      test_p1 = div.select('p')[1].get_text()
 
      if "Chapter" not in test_p0 and "Chapter" not in test_p1:
-      h4 = s.new_tag('h4')
-      h4.string = chapterTitle
-      div.insert(1, h4)
+      html_gen("h4", chapterTitle, div, 1)
 
      for a in div.select("a"):
       a.decompose()
@@ -155,27 +156,26 @@ for i in range(start, end+1):
      print(e)
      print("Possibly Incorrect Link For Chapter " + str(i))
      print("Skipping Chapter " + str(i))
+     err.append(i)
     
     except Exception as e:
      print(e)
      err.append(i)
 
 # About Novel
-html_gen("h3", "About Novel : ")
+html_gen("h3", "About Novel : ", about)
 about.append(aboutNovel)
-html_gen("hr", '')
-html_gen("h3", "Chapters")
-html_gen("p", "Total = " + str(counter))
-html_gen("p", "No. Of Chapters That Raised Exceptions = " + str(len(err)))
+html_gen("hr", '', about)
+html_gen("h3", "Chapters", about)
+html_gen("p", "Total = " + str(counter), about)
+html_gen("p", "No. Of Chapters That Raised Exceptions = " + str(len(err)), about)
 if len(err) != 0:
-    html_gen("p", "And They Are : ")
+    html_gen("p", "And They Are : ", about)
     for i in err:
-        html_gen("li", i)
-html_gen("hr", '')
+        html_gen("li", i, about)
+html_gen("hr", '', about)
 synopsis.findNext('p').decompose()
-new_for_synp = soup.new_tag("h3")
-new_for_synp.string = "Synopsis :"
-about.append(new_for_synp)
+html_gen("h3", "Synopsis :", about)
 about.append(synopsis)
 
 # Create About Novel Page
