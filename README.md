@@ -1,7 +1,7 @@
 <img src="https://img.shields.io/badge/Version-3.0-brightgreen.svg" >
 
 # About: 
-<h4>Python Script To Copy [WuxiaWorld](https://www.wuxiaworld.com/) Chapters Into EPUB File.</h4>
+<b>Python Script To Copy [WuxiaWorld](https://www.wuxiaworld.com/) Chapters Into EPUB File.</b>
 
 Copies The Novel Chapters Along With Novel Details And Sometimes(Once Every 6-10 Times Code Is Run) 'Not' The Cover Image (IDK Why ? Maybe Because Of BeautifulSoup4 Internal Problem).
 
