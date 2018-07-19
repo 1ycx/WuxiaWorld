@@ -19,7 +19,7 @@ novelURL =  'https://www.wuxiaworld.com/novel/ancient-strengthening-technique/'
 while novelURL == '':
     print("Novel URL Not Provided Inside The Script.")
     novelURL = str(input("Please Enter Novel URL : "))
-print("Novel URL Set")
+print("\r\nNovel URL Set")
 
 # Scraper + Passing To Beautiful Soup
 strpage = scraper.get(novelURL).content 
@@ -48,17 +48,17 @@ for a in soup.findAll("li", class_="chapter-item"):
 length = len(links)
 start = 0
 end = length
-print("Total No. Of Chapters = " + str(length))
-print("Please Note That No. Of Chapters Shown May Not Match The Actual Numbering")
+print("\r\nTotal No. Of Chapters = " + str(length))
+print("\r\nPlease Note That No. Of Chapters Shown May Not Match The Actual Numbering")
 print("Because Some Chapters Maybe Numbered As 187-A, 187-B, 187-C Although Being")
 print("3 Different HTML Pages.")
-print("Enter 1 - To Download All Chapters")
-print("Enter 2 - To Download A Part, Like 0-100 Or 400-650")
-check = int(input("Enter Your Choice : "))
+print("\r\nEnter 1 - To Download All Chapters")
+print("\r\nEnter 2 - To Download A Part, Like 0-100 Or 400-650")
+check = int(input("\r\nEnter Your Choice : "))
 if check == 2:
-    print("Please Note That To Download From First Chapter, Enter \"First Chapter\"") 
-    print("Value As \"0\", Not \"1\"")
-    start = int(input("Enter First Chapter : "))
+    print("\r\n**Note : To Download From First Chapter, Enter \"First Chapter\"") 
+    print("         Value As \"0\", Not \"1\"")
+    start = int(input("\r\nEnter First Chapter : "))
     end   = int(input("Enter Last Chapter  : "))
 elif check == 1:
     print("Okay, All Available Chpaters Will Be Downloaded.")
@@ -111,56 +111,56 @@ for i in range(start, end+1):
     
     try:
     
-     if i == length:
-        break
+        if i == length:
+            break
 
-     #####################
-     # Sets the adress here 
-     strpage = scraper.get(links[i]).content 
+        #####################
+        # Sets the adress here 
+        strpage = scraper.get(links[i]).content 
 
-     # Modifies the HTML received
-     s = bs(strpage, "html5lib")    
-     #chapterTitle = "Chapter : " + str(i)
-     chapterTitle = s.select('h4')[1].get_text()
-     div = s.select_one('div[class="fr-view"]')
-     test_p0 = div.select('p')[0].get_text()
-     test_p1 = div.select('p')[1].get_text()
+        # Modifies the HTML received
+        s = bs(strpage, "html5lib")    
+        #chapterTitle = "Chapter : " + str(i)
+        chapterTitle = s.select('h4')[1].get_text()
+        div = s.select_one('div[class="fr-view"]')
+        test_p0 = div.select('p')[0].get_text()
+        test_p1 = div.select('p')[1].get_text()
 
-     if "Chapter" not in test_p0 and "Chapter" not in test_p1:
-      html_gen("h4", chapterTitle, div, 1)
+        if "Chapter" not in test_p0 and "Chapter" not in test_p1:
+            html_gen("h4", chapterTitle, div, 1)
 
-     for a in div.select("a"):
-      a.decompose()
+        for a in div.select("a"):
+            a.decompose()
 
-     # Creates a chapter
-     c2 = epub.EpubHtml(title=chapterTitle, file_name='chap_'+str(i)+'.xhtml', lang='hr')
-     c2.content = div.encode("utf-8")
-     book.add_item(c2)
+        # Creates a chapter
+        c2 = epub.EpubHtml(title=chapterTitle, file_name='chap_'+str(i)+'.xhtml', lang='hr')
+        c2.content = div.encode("utf-8")
+        book.add_item(c2)
 
 
-     # Add to table of contents
-     book.toc.append(c2)    
+        # Add to table of contents
+        book.toc.append(c2)    
 
-     # Add to book ordering
-     book.spine.append(c2)
+        # Add to book ordering
+        book.spine.append(c2)
 
-     print("Parsed Chapter " + str(i))
-     counter = counter + 1
+        print("Parsed Chapter " + str(i))
+        counter = counter + 1
 
     except KeyboardInterrupt as e:
-     print("Keyboard Interrupt")
-     print(e)
-     break
+        print("Keyboard Interrupt")
+        print(e)
+        break
     
     except IndexError as e:
-     print(e)
-     print("Possibly Incorrect Link For Chapter " + str(i))
-     print("Skipping Chapter " + str(i))
-     err.append(i)
+        print(e)
+        print("Possibly Incorrect Link For Chapter " + str(i))
+        print("Skipping Chapter " + str(i))
+        err.append(i)
     
     except Exception as e:
-     print(e)
-     err.append(i)
+        print(e)
+        err.append(i)
 
 # About Novel
 html_gen("h3", "About Novel : ", about)
@@ -220,7 +220,6 @@ epub.write_epub(saveLocation, book, {})
 
 # Location File Got Saved
 if pathToLocation == '':
- print("Saved at " + str(os.getcwd()) + ' as "' + title + '_' + str(start) + '_' + str(i) + '.epub"')
+    print("Saved at " + str(os.getcwd()) + ' as "' + title + '_' + str(start) + '_' + str(i) + '.epub"')
 else :
- print("Saved at " + saveLocation)
-
+    print("Saved at " + saveLocation)
