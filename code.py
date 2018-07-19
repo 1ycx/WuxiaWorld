@@ -37,8 +37,7 @@ book.set_title(title)
 # Get All Chapter Links
 links = []
 for a in soup.findAll("li", class_="chapter-item"):
-    href = a.findNext("a")["href"]
-    link = href
+    href = link = a.findNext("a")["href"]
     if "https" not in link:
         href = ww + link
     links.append(href)
@@ -46,8 +45,7 @@ for a in soup.findAll("li", class_="chapter-item"):
 
 # Chapter Links
 length = len(links)
-start = 0
-end = length
+start, end = 0, length
 print("\r\nTotal No. Of Chapters = " + str(length))
 print("\r\nPlease Note That No. Of Chapters Shown May Not Match The Actual Numbering")
 print("Because Some Chapters Maybe Numbered As 187-A, 187-B, 187-C Although Being")
@@ -104,8 +102,7 @@ def html_gen(elem, val, tag, insert_loc=None):
     else:
         tag.insert(insert_loc, element)
 
-counter = 0
-err = []
+counter, err = 0, []
 
 for i in range(start, end+1):
     
