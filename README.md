@@ -24,7 +24,7 @@ Just Enter The Novel URL And You're Done!
 
 
 ## Documentation :
-1. For Beginners, After Setting Up A Working Python 3 Environment, You Need To Install Some Packages. To Install, Run These Commands In Your CMD/Terminal :
+1. For Beginners, After Setting Up A Working Python 3 Environment(Along With Latest `pip`), You Need To Install Some Packages. To Install, Run These Commands In Your CMD/Terminal :
    * `pip3 install bs4`
    * `pip3 install ebooklib`
    * `pip3 install cfscrape`
