@@ -168,8 +168,8 @@ html_gen("p", "Total = " + str(counter), about)
 html_gen("p", "No. Of Chapters That Raised Exceptions = " + str(len(err)), about)
 if len(err) != 0:
     html_gen("p", "And They Are : ", about)
-    for i in err:
-        html_gen("li", i, about)
+    for e in err:
+        html_gen("li", str(e), about)
 html_gen("hr", '', about)
 synopsis.findNext('p').decompose()
 html_gen("h3", "Synopsis :", about)
