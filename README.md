@@ -13,6 +13,11 @@ Just Enter The Novel URL And You're Done!
 
 <br/>
 
+## **Note : 
+Do check out my other scraper for http://m.wxuiaworld.co here - [**Kogam22/m.wuxiaworld.co-Scraper**](https://github.com/Kogam22/m.wuxiaworld.co-Scraper), which is like a pirate site and has all the latest updates of novels from [**Webnovel(Qidan)**](https://www.webnovel.com/) with regular chapter updates.
+
+<br/>
+
 ## Task(s) :
 - [x] Get List Of Chapters From Novel Website And Use Links From The List Rather Than Progress Sequentially Because Of The Arising Problem Of Some Pages Not Having Sequential Names.
 
