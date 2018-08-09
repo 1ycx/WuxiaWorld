@@ -126,4 +126,4 @@ I've Copied The Table From BS4 Website Below To Give A Faint Overview.
 
 ## License
 
-Copyright &copy; 2018 [Kogam22](https://github.com/Kogam22). Released under the terms of the [Apache 2.0 license](WuxiaWorld/LICENSE).
+Copyright &copy; 2018 [Kogam22](https://github.com/Kogam22). Released under the terms of the [Apache 2.0 license](LICENSE).
