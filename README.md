@@ -14,7 +14,7 @@ Just Enter The Novel URL And You're Done!
 <br/>
 
 ## **Note : 
-Do check out my other scraper for http://m.wxuiaworld.co here - [**Kogam22/m.wuxiaworld.co-Scraper**](https://github.com/Kogam22/m.wuxiaworld.co-Scraper), which is like a pirate site and has all the latest updates of novels from [**Webnovel(Qidan)**](https://www.webnovel.com/) with regular chapter updates.
+Do check out my other scraper for http://m.wxuiaworld.co here - [**Kogam22/m.wuxiaworld.co-Scraper**](https://github.com/Kogam22/m.wuxiaworld.co-Scraper), which is **Webnovel(Qidan) Unlocked + WuxiaWorld**; i.e has all what Webnovel(Qidan) has but without those **Spirit Stones** along with wuxiaworld novels. Also, the updates are regular. 
 
 <br/>
 
