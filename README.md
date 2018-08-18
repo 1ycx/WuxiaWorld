@@ -23,7 +23,7 @@ Do check out my other scraper for http://m.wxuiaworld.co here - [**Kogam22/m.wux
 
 
 ## Problem(s) :
-* None Yet.
+* None Yet (Report if any).
    
 <br/>
 
