@@ -146,17 +146,17 @@ for i in range(start, end+1):
 
     except KeyboardInterrupt as e:
         print("Keyboard Interrupt")
-        print(e.reason)
+        print(e)
         break
     
     except IndexError as e:
-        print(e.reason)
+        print(e)
         print("Possibly Incorrect Link For Chapter " + str(i))
         print("Skipping Chapter " + str(i))
         err.append(i)
     
     except Exception as e:
-        print(e.reason)
+        print(e)
         err.append(i)
 
 # About Novel
