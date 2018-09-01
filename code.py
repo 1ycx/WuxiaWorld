@@ -1,11 +1,7 @@
 import os
-import cfscrape
-import requests
+import requests as req
 from bs4 import BeautifulSoup as bs
 from ebooklib import epub
-
-# Create Scraper Object
-scraper = cfscrape.create_scraper()
 
 # Create The EPUB File
 book = epub.EpubBook()
@@ -22,8 +18,8 @@ while novelURL == '':
 print("\r\nNovel URL Set")
 
 # Scraper + Passing To Beautiful Soup
-strpage = scraper.get(novelURL).content 
-soup = bs(strpage, "html5lib")
+strpage = req.get(novelURL)
+soup = bs(strpage.text, "html5lib")
 
 # Seperating Parts From Soup
 aboutNovel = soup.select_one('div[class="media media-novel-index"]')
@@ -113,10 +109,10 @@ for i in range(start, end+1):
 
         #####################
         # Sets the adress here 
-        strpage = scraper.get(links[i]).content 
+        strpage = req.get(links[i])
 
         # Modifies the HTML received
-        s = bs(strpage, "html5lib")    
+        s = bs(strpage.text, "html5lib")    
         #chapterTitle = "Chapter : " + str(i)
         chapterTitle = s.select('h4')[1].get_text()
         div = s.select_one('div[class="fr-view"]')
@@ -189,7 +185,7 @@ book.add_item(epub.EpubNcx())
 book.add_item(epub.EpubNav())
 
 # Defines CSS Style
-style = 'p {text-align: left;}'
+style = 'p { text-align : left; }'
 nav_css = epub.EpubItem(uid="style_nav", file_name="style/nav.css", media_type="text/css", content=style)
 
 # Adds CSS File
@@ -199,16 +195,18 @@ book.add_item(nav_css)
 # Default Location Will Be The Place Where This Script Is Located
 # To Change, 
 # 1 - Add The Location Inside The Empty pathToLocation
-#   Example 1.1 - Windows : 
+#   Example 1 - Windows : 
 #       pathToLocation = 'C:\\Users\\Adam\\Documents\\'
 #       Notice The Extra \ To Be Added Along With Every Original - This Is Compulsory For Every \
-#   Example 1.2 - Linux : 
+#   Example 2 - Unix/POSIX Based(OS X, Linux, Free BSD etc) : 
 #       pathToLocation = '/home/Adam/Documents/'   
 #       Notice That No Extra / Are Added Along With Original  
 # OR 
-# 2 - Move This Script And To, And Run From The Location To Be Saved
+# 2 - Move This Script To, And Run From The Location To Be Saved
 pathToLocation = ''
-saveLocation = pathToLocation + title + '_' + str(start) + '_' + str(i) + '.epub'
+downloadDetails = '"' + title + '_' + str(start) + '_' + str(counter) + '.epub"'
+saveLocation = pathToLocation + downloadDetails
+
 
 print("Saving . . .")
 
@@ -217,6 +215,8 @@ epub.write_epub(saveLocation, book, {})
 
 # Location File Got Saved
 if pathToLocation == '':
-    print("Saved at " + str(os.getcwd()) + ' as "' + title + '_' + str(start) + '_' + str(i) + '.epub"')
+    print("Saved at", os.getcwd(), 'as', downloadDetails) 
+    # Example : Saved at /home/Adam/Documents as "The Strongest System_0_3.epub"
 else :
-    print("Saved at " + saveLocation)
+    print("Saved at", saveLocation)
+    
