@@ -17,7 +17,7 @@ while novelURL == '':
     novelURL = str(input("Please Enter Novel URL : "))
 print("\r\nNovel URL Set")
 
-# Scraper + Passing To Beautiful Soup
+# Get & Pass To BS4
 strpage = req.get(novelURL)
 soup = bs(strpage.text, "html5lib")
 
@@ -68,7 +68,7 @@ try:
 except Exception:
     print("########################################")
     print("####### Image Exception Called #########")
-    print("## Sorry, Cover Image Download Failed ##")
+    print("#### Sorry, Cover Image Load Failed ####")
     print("########### So, Skipping It ############")
     print("########################################")
     aboutNovel = soup.select_one('div[class="media-body"]')
@@ -79,7 +79,7 @@ else:
     if "https" not in src:
         src = ww + src
     img_name = src.split('/')[-1].split('?')[0]
-    r = requests.get(src)
+    r = req.get(src)
     with open(img_name, 'wb') as f:  
         f.write(r.content)
     print("Image File : "+img_name)
@@ -93,12 +93,12 @@ else:
 def html_gen(elem, val, tag, insert_loc=None):
     element = soup.new_tag(elem)
     element.string = val
-    if insert_loc == None:
+    if not insert_loc:
         tag.append(element)
     else:
         tag.insert(insert_loc, element)
 
-counter, err = 0, []
+counter, err = start - 1, []
 
 for i in range(start, end+1):
     
@@ -137,8 +137,8 @@ for i in range(start, end+1):
         # Add to book ordering
         book.spine.append(c2)
 
-        print("Parsed Chapter " + str(i))
-        counter = counter + 1
+        print("Parsed Chapter", i)
+        counter += 1
 
     except KeyboardInterrupt as e:
         print("Keyboard Interrupt")
@@ -147,14 +147,16 @@ for i in range(start, end+1):
     
     except IndexError as e:
         print(e)
-        print("Possibly Incorrect Link For Chapter " + str(i))
-        print("Skipping Chapter " + str(i))
+        print("Possibly Incorrect Link For Chapter", i)
+        print("Skipping Chapter", i)
         err.append(i)
     
     except Exception as e:
         print(e)
         err.append(i)
 
+if counter < 0: counter = 0
+        
 # About Novel
 html_gen("h3", "About Novel : ", about)
 about.append(aboutNovel)
