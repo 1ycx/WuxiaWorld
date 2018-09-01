@@ -5,34 +5,35 @@
 
 Copies The Novel Chapters Along With Novel Details And Sometimes(Once Every 6-10 Times Code Is Run) 'Not' The Cover Image (IDK Why ? Maybe Because Of BeautifulSoup4 Internal Problem).
 
-Just Enter The Novel URL And You're Done!
+How Does The Script Work ? Just Enter The Novel URL Inside The Script And The Rest Follows.
 
 <h4>I'll Try To Add Any Necessary Updates.</h4>
 
-<h4> Initial Author :  <a href="https://forum.wuxiaworld.com/profile/Aundinn">Aundinn</a> </h4>
+<h4> Initial Implementation By :  <a href="https://forum.wuxiaworld.com/discussion/7006/script-html-to-epub">Aundinn</a> </h4>
 
 <br/>
 
 ## **Note : 
-Do check out my other scraper for http://m.wxuiaworld.co here - [**Kogam22/m.wuxiaworld.co-Scraper**](https://github.com/Kogam22/m.wuxiaworld.co-Scraper), which is **Webnovel(Qidan) Unlocked + WuxiaWorld**; i.e has all what Webnovel(Qidan) has but without those **Spirit Stones** along with wuxiaworld novels. Also, the updates are regular. 
+Do check out my other scraper for http://m.wxuiaworld.co here - [**Kogam22/m.wuxiaworld.co-Scraper**](https://github.com/Kogam22/m.wuxiaworld.co-Scraper). Ask Me, Why This Website? Well, It Has Novels From **Webnovel(Qidan) & WuxiaWorld** With All Latest Chapters <b>Unlocked</b>. 
+
+**No Spirit Stones, No Patreon, No Subscription Or Any Of Those Things Required To Read The Latest Chapters!**
+Don't Take My Word For It ? Check It Out.
 
 <br/>
 
 ## Task(s) :
 - [x] Get List Of Chapters From Novel Website And Use Links From The List Rather Than Progress Sequentially Because Of The Arising Problem Of Some Pages Not Having Sequential Names.
 
-
 ## Problem(s) :
-* None Yet (Report if any).
-   
-<br/>
+* None Yet(Report if any).
 
+<br/>
 
 ## Documentation :
 1. For Beginners, After Setting Up A Working Python 3 Environment(Along With Latest `pip`), You Need To Install Some Packages. To Install, Run These Commands In Your CMD/Terminal :
    * `pip3 install bs4`
    * `pip3 install ebooklib`
-   * `pip3 install cfscrape`
+   * `pip3 install requests`
    * `pip3 install html5lib=="0.9999999"` 
 
 2. Download The Python Script And Unzip It.
@@ -42,14 +43,16 @@ Do check out my other scraper for http://m.wxuiaworld.co here - [**Kogam22/m.wux
 4. In Case The Script Was Not Updated According To The Changes In Website, You Might Refer The [**BeautifulSoup Docs**](https://www.crummy.com/software/BeautifulSoup/bs4/doc/) To Make Changes Accordingly.
 
 4. To Run, Open CMD/Terminal, Navigate To The Unzip Location And Type :
-  `python3 code.py`
+   * Linux -`python3 code.py`
+   * Windows - `python code.py` or `py code.py`
 
 5. EPUB File Will Be Saved At The Location Of Script.
 
 ### Working :
 * Set Novel Link in `novelURL`
+   * Example - https://www.wuxiaworld.com/novel/martial-god-asura | https://www.wuxiaworld.com/novel/a-will-eternal
 * If Specific No. Of Chapters Are To Be Downloaded, Then Enter 2 And Provide The `start` And `end` Chapters.
-* All Chapters Of Corresponding Novel Will Be Downloaded And Saved As `novel-name_start-chapter_end-chapter.epub`
+* EPUB File Will Be Saved In The Format `NovelName_start-chapter_end-chapter.epub`
 
 ### Parsing :
 `html5lib` Is Used Because Although Being Tiny Winy Bit Slow, It Generates Valid HTML. You May Compare Others Here, [**Differences Between Parsers**](https://www.crummy.com/software/BeautifulSoup/bs4/doc/#differences-between-parsers).
