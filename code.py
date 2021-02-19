@@ -116,7 +116,11 @@ for i in range(start, end+1):
         # Modifies the HTML received
         s = bs(strpage.text, "html5lib")
         #chapterTitle = "Chapter : " + str(i)
-        chapterTitle = s.select('h4')[1].get_text()
+        chapterTitle = ''
+        for idx in range(0, 20):
+            chapterTitle = s.select('h4')[idx].get_text()
+            if "Chapter" in chapterTitle:
+                break
         div = s.select_one('div[class="fr-view"]')
         test_p0 = div.select('p')[0].get_text()
         test_p1 = div.select('p')[1].get_text()
