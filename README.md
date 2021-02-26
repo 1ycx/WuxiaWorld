@@ -14,7 +14,7 @@ How Does The Script Work ? Just Enter The Novel URL Inside The Script And The Re
 <br/>
 
 ## **Note : 
-Do check out my other scraper for http://m.wxuiaworld.co here - [**Kogam22/m.wuxiaworld.co-Scraper**](https://github.com/Kogam22/m.wuxiaworld.co-Scraper). Ask Me, Why This Website? Well, It Has Novels From **Webnovel(Qidan) & WuxiaWorld** With All Latest Chapters <b>Unlocked</b>. 
+Check this other website for reading novels: http://m.wxuiaworld.co . Ask Me, Why This Website? Well, It Has Novels From **Webnovel(Qidan) & WuxiaWorld** With All Latest Chapters <b>Unlocked</b>. 
 
 **No Spirit Stones, No Patreon, No Subscription Or Any Of Those Things Required To Read The Latest Chapters!**
 Don't Take My Word For It ? Check It Out.
