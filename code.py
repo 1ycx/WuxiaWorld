@@ -55,7 +55,7 @@ if check == 2:
     print("\r\n**Note : To Download From First Chapter, Enter \"First Chapter\"")
     print("         Value As \"0\", Not \"1\"")
     start = int(input("\r\nEnter First Chapter : "))
-    end   = int(input("Enter Last Chapter  : "))
+    end   = int(input("Enter Last Chapter [last] : ") or length)
 elif check == 1:
     print("Okay, All Available Chpaters Will Be Downloaded.")
 else :
