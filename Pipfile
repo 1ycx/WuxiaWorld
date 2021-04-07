@@ -1,0 +1,23 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+lxml = "==4.6.3"
+six = "==1.15.0"
+beautifulsoup4 = "==4.9.3"
+certifi = "==2020.12.5"
+chardet = "==4.0.0"
+html5lib = "==1.1"
+idna = "==2.10"
+requests = "==2.25.1"
+soupsieve = "==2.2.1"
+urllib3 = "==1.26.4"
+webencodings = "==0.5.1"
+EbookLib = "==0.17.1"
+
+[dev-packages]
+
+[requires]
+python_version = "3.8"
