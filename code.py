@@ -2,6 +2,7 @@ import os
 import requests as req
 from bs4 import BeautifulSoup as bs
 from ebooklib import epub
+import sys
 
 # Create The EPUB File
 book = epub.EpubBook()
@@ -11,7 +12,11 @@ book.set_language('en')
 ww = 'https://www.wuxiaworld.com'
 
 # Enter The Novel URL Here
-novelURL =  'https://www.wuxiaworld.com/novel/ancient-strengthening-technique/'
+# Link format : https://www.wuxiaworld.com/novel/ancient-strengthening-technique/
+novelURL =  ''
+if sys.argv[1]:
+    novelURL = sys.argv[1]
+    
 while novelURL == '':
     print("Novel URL Not Provided Inside The Script.")
     novelURL = str(input("Please Enter Novel URL : "))
