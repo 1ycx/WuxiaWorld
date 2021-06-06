@@ -13,17 +13,18 @@ ww = 'https://www.wuxiaworld.com'
 
 # Enter The Novel URL Here
 # Link format : https://www.wuxiaworld.com/novel/ancient-strengthening-technique/
-novelURL =  ''
+novelURL = ''
 if sys.argv[1]:
     novelURL = sys.argv[1]
-    
+
 while novelURL == '':
     print("Novel URL Not Provided Inside The Script.")
     novelURL = str(input("Please Enter Novel URL : "))
 print("\r\nNovel URL Set")
 
 # Get & Pass To BS4
-headers = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.95 Safari/537.36'}
+headers = {
+    'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.95 Safari/537.36'}
 strpage = req.get(novelURL, headers=headers)
 soup = bs(strpage.text, "html5lib")
 
@@ -60,10 +61,10 @@ if check == 2:
     print("\r\n**Note : To Download From First Chapter, Enter \"First Chapter\"")
     print("         Value As \"0\", Not \"1\"")
     start = int(input("\r\nEnter First Chapter : "))
-    end   = int(input("Enter Last Chapter [last] : ") or length)
+    end = int(input("Enter Last Chapter [last] : ") or length)
 elif check == 1:
     print("Okay, All Available Chpaters Will Be Downloaded.")
-else :
+else:
     print("Invalid Choice. All Available Chapters Will Be Downloaded.")
 
 # Cover Image
@@ -97,6 +98,7 @@ else:
         img.decompose()
     spine_loc = 2
 
+
 def html_gen(elem, val, tag, insert_loc=None):
     element = soup.new_tag(elem)
     element.string = val
@@ -104,6 +106,7 @@ def html_gen(elem, val, tag, insert_loc=None):
         tag.append(element)
     else:
         tag.insert(insert_loc, element)
+
 
 counter, err = start - 1, []
 
@@ -137,10 +140,10 @@ for i in range(start, end+1):
             a.decompose()
 
         # Creates a chapter
-        c2 = epub.EpubHtml(title=chapterTitle, file_name='chap_'+str(i)+'.xhtml', lang='hr')
+        c2 = epub.EpubHtml(title=chapterTitle,
+                           file_name='chap_'+str(i)+'.xhtml', lang='hr')
         c2.content = div.encode("utf-8")
         book.add_item(c2)
-
 
         # Add to table of contents
         book.toc.append(c2)
@@ -166,7 +169,8 @@ for i in range(start, end+1):
         print(e)
         err.append(i)
 
-if counter < 0: counter = 0
+if counter < 0:
+    counter = 0
 
 # About Novel
 about.append(aboutNovel)
@@ -185,7 +189,8 @@ about.append(synopsis)
 
 # Create About Novel Page
 aboutNovelTitle = "About Novel"
-c1 = epub.EpubHtml(title=aboutNovelTitle, file_name='About_novel'+'.xhtml', lang='hr')
+c1 = epub.EpubHtml(title=aboutNovelTitle,
+                   file_name='About_novel'+'.xhtml', lang='hr')
 c1.content = about.encode('utf-8')
 book.add_item(c1)
 book.toc.insert(0, c1)
@@ -198,7 +203,8 @@ book.add_item(epub.EpubNav())
 
 # Defines CSS Style
 style = 'p { text-align : left; }'
-nav_css = epub.EpubItem(uid="style_nav", file_name="style/nav.css", media_type="text/css", content=style)
+nav_css = epub.EpubItem(
+    uid="style_nav", file_name="style/nav.css", media_type="text/css", content=style)
 
 # Adds CSS File
 book.add_item(nav_css)
@@ -229,5 +235,5 @@ epub.write_epub(saveLocation, book, {})
 if pathToLocation == '':
     print("Saved at", os.getcwd(), 'as', downloadDetails)
     # Example : Saved at /home/Adam/Documents as "The Strongest System_0_3.epub"
-else :
+else:
     print("Saved at", saveLocation)
